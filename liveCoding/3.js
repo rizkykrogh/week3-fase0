@@ -56,3 +56,36 @@ var line = 'abcde&12345' //kalian bisa mengubah isi dari 'line' untuk menguji co
 var param = 'letters' //kalian bisa mengisi param ini dengan 'sigma', 'letters', 'length', dll
 
 //tulis kode kalian disini
+switch(param) {
+    case 'sigma':
+        var result = 0;
+        for(var i = 0; line[i] !== undefined; i++) {
+            var parsedNumber = Number.parseInt(line[i], 10);
+            if(!Number.isNaN(parsedNumber)) {
+                result += parsedNumber;
+            }
+        }
+        console.log(result);
+        break;
+    case 'letters' :
+        var count = 0;
+        for(var i =0; line[i] !== undefined; i++) {
+            if(line[i] >= 'a' && line[i] <= 'z') {
+                count += 1;
+            }
+        }
+        console.log(count);
+        break;
+    case 'length':
+        var count = 0;
+        for(var i = 0; line[i] !== undefined; i++) {
+            var parsedNumber = Number.parseInt(line[i], 10);
+            if(line[i] >= 'a' && line[i] <= 'z' || !Number.isNaN(parsedNumber)){
+                count += 1;
+            }
+        }
+        console.log(count);
+        break;
+    default:
+        console.log('Parameter salah');
+}
