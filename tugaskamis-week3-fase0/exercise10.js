@@ -1,7 +1,7 @@
 function perkalianUnik(arr) {
     // you can only write your code here!
     var result = [];
-    for(var i = 0; 1 < arr.length; i++) {
+    for(var i = 0; i < arr.length; i++) {
         var tempNum = 1;
         for(var j = 0; j < arr.length; j++){
             if(i != j) {
